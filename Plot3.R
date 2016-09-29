@@ -33,3 +33,5 @@ with(Data_filter,plot(x=DateTime,y=Sub_metering_1,type='l',xlab='', ylab='Global
 with(Data_filter,points(x=DateTime,y=Sub_metering_2,col='red',type='l'))
 with(Data_filter,points(x=DateTime,y=Sub_metering_3,col='blue',type='l'))
 legend("topright", legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), pch="_", col=c("black","red","blue"))
+dev.copy(png,file='plot3.png', width=480, height=480)     
+dev.off()

@@ -31,5 +31,5 @@ head(Data_filter)
 # Second plot
 par(mfrow=c(1,1))
 plot(x=Data_filter$DateTime,y=Data_filter$Global_active_power,type='l',xlab='', ylab='Global Power Active (Kilowatts)')
-dev.copy(png,file='plot2.png')    
+dev.copy(png,file='plot2.png', width=480, height=480)    
 dev.off()

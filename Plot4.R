@@ -40,6 +40,6 @@ with(Data_filter,points(x=DateTime,y=Sub_metering_3,col='blue',type='l'))
 legend("topright", legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), pch="_", col=c("black","red","blue"))
 # plot 4
 plot(x=Data_filter$DateTime,y=Data_filter$Global_reactive_power,type='l',xlab='datetime', ylab='Global_reactive_power',bty="n")
-dev.copy(png,file='plot4.png')    
+dev.copy(png,file='plot4.png', width=480, height=480)  
 dev.off()
 
