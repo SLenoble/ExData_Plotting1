@@ -16,9 +16,9 @@ str(Data)
 #Paste Date and Time to make a global variable
 DateTime<-paste(Data$Date, Data$Time)
 #Transform format
-DateTime<-strptime(Date, "%d/%m/%Y %H:%M:%S")
+DateTime<-strptime(DateTime, "%d/%m/%Y %H:%M:%S")
 # Update orignal data
-Data$DateTime<-Date
+Data$DateTime<-DateTime
 # Verify
 summary(Data$DateTime)
 
@@ -32,6 +32,6 @@ par(mfrow=c(1,1))
 with(Data_filter,plot(x=DateTime,y=Sub_metering_1,type='l',xlab='', ylab='Global Power Active (Kilowatts)'))
 with(Data_filter,points(x=DateTime,y=Sub_metering_2,col='red',type='l'))
 with(Data_filter,points(x=DateTime,y=Sub_metering_3,col='blue',type='l'))
-legend("topright", legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), pch="_", col=c("black","red","blue"))
-dev.copy(png,file='plot3.png', width=480, height=480)     
+legend("topright", legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), pch="_", col=c("black","red","blue"), lty=1, cex=0.8)
+dev.copy(png,file='plot3.png', width=480, height=480)    
 dev.off()

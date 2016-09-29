@@ -16,9 +16,9 @@ str(Data)
 #Paste Date and Time to make a global variable
 DateTime<-paste(Data$Date, Data$Time)
 #Transform format
-DateTime<-strptime(Date, "%d/%m/%Y %H:%M:%S")
+DateTime<-strptime(DateTime, "%d/%m/%Y %H:%M:%S")
 # Update orignal data
-Data$DateTime<-Date
+Data$DateTime<-DateTime
 # Verify
 summary(Data$DateTime)
 
